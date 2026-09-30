@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+
+    <meta name="description" content="Husanix personal portfolio website">
+
+    <title>Husanix</title>
+</head>
+    <style> ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        header {
+            margin-left: 20px;
+            margin-right: 20px;
+            background-color: 514a85;
+            height: 80px;
+        }
+        
+        body {
+    background-image:
+        linear-gradient(
+            rgba(11, 16, 32, 0.25),
+            rgba(11, 16, 32, 0.25)
+        ),
+        url("whiteai.jpeg");
+        
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: aqua;
+            width: 150px;
+        }
+        .myclass{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        }
+        .service-card {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border-top: 4px solid rgb(101, 10, 48);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+
+
+        }   
+        .container {
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 0 20px;
+        }
+        .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        color: rgb(93, 4, 4);
+        background-color: aqua;
+        }
+        .button-services:hover {
+            color: green;
+            transform: scale(1.1);
+        }
+
+        .heading-decor {
+        transition: transform 0.5s ease;
+        transform-origin: left center;
+        }
+
+        .heading-decor:hover {
+            transform: translateY(-10px) scale(1.2);
+        }
+
+        .last {
+        display: flex;
+        gap: 20px;
+        }
+
+        .last-card {
+        flex: 1;
+        padding: 30px;
+        background-color: lightgray;
+        border-top: 3px solid rgb(0, 0, 0);
+        border-radius: 4px;
+        border-color: black;
+        transition: transform 0.3s ease-in-out;
+
+        }
+        .last-card:hover {
+            transform: translateY(-7px) scale(1.06);
+            box-shadow: 5px 5px 5px rgb(52, 74, 2);
+        }
+        .image-decor {
+            border-radius: 5px;
+            border-width: 30px;
+            border-top-color: crimson;
+            border-top: 4px solid;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-decor:hover{
+            transform: scale(1.09);
+        }
+
+        .para {
+            color: #F1F5F9;
+        }
+
+        .para:hover{
+            color: cadetblue;
+            background-color: black;
+        }
+
+
+
+    </style>
+
+
+
+
+
+<body>
+
+<header>
+
+    <h1 style="text-align: center; margin: 0; width: 50; color: #514a85 ;">HUSANIX</h1>
+    <p style="text-align: center; margin: 5px 0 0 0;color:  #b2bcca ;">AI | Automate |Innovate</p>
+    
+</header>  
+
+
+
+<section>
+    <img src="1.png" class="image-decor" alt="dental" height="350px" width="350px" style="float: right; margin: 20px;" >
+    <p class="para"><br> Your teeth crooked, crowded, or spaced apart? Do you want to improve your smile and overall dental health? Teeth braces are a common and effective orthodontic treatment that can help gradually move teeth into a better position and improve the appearance of your smile. Your teeth crooked, crowded, or spaced apart? Do you want to improve your smile and overall dental health? Teeth braces are a common and effective orthodontic treatment that can help gradually move teeth into a better position and improve the appearance of your smile. Braces are not only used for cosmetic purposes. Your teeth crooked, crowded, or spaced apart? Do you want to improve your smile and overall dental health? Teeth braces are a common and effective orthodontic treatment that can help gradually move teeth into a better position and improve the appearance of your smile. Braces are not only used for cosmetic purposes. Your teeth crooked, crowded, or spaced apart? Do you want to improve your smile and overall dental health? Teeth braces are a common and effective orthodontic treatment that can help gradually move teeth into a better position and improve the appearance of your smile. Braces are not only used for cosmetic purposes. Braces are not only used for cosmetic purposes. They can […]</p>
+    <br>
+</section>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<section style="
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+">
+
+    <div class="service-card">
+        <h2>FOR DENTAL SURGERY</h2>
+
+        <form>
+            <br><br>
+
+            <label for="name1">YOUR NAME:</label>
+            <input id="name1" type="text" placeholder="Write your name">
+
+            <br><br>
+
+            <label for="email1">ENTER EMAIL:</label>
+            <input id="email1" type="email" placeholder="Write your Email">
+
+            <br><br><br><br>
+
+            <label for="message1">MESSAGE:</label>
+            <br>
+
+            <textarea
+                id="message1"
+                name="message1"
+                rows="5"
+                cols="30"
+                placeholder="Write your Comment"
+            ></textarea>
+        </form>
+    </div>
+
+
+    <div class="service-card">
+        <h2>FOR CHECKUP</h2>
+
+        <form>
+            <br><br>
+
+            <label for="name2">YOUR NAME:</label>
+            <input id="name2" type="text" placeholder="Write your name">
+
+            <br><br>
+
+            <label for="email2">ENTER EMAIL:</label>
+            <input id="email2" type="email" placeholder="Write your Email">
+
+            <br><br><br><br>
+
+            <label for="message2">MESSAGE:</label>
+            <br>
+
+            <textarea
+                id="message2"
+                name="message2"
+                rows="5"
+                cols="30"
+                placeholder="Write your Comment"
+            ></textarea>
+        </form>
+    </div>
+
+
+    <div class="service-card">
+        <h2>FOR SCALING</h2>
+
+        <form>
+            <br><br>
+
+            <label for="name2">YOUR NAME:</label>
+            <input id="name2" type="text" placeholder="Write your name">
+
+            <br><br>
+
+            <label for="email2">ENTER EMAIL:</label>
+            <input id="email2" type="email" placeholder="Write your Email">
+
+            <br><br><br><br>
+
+            <label for="message2">MESSAGE:</label>
+            <br>
+
+            <textarea
+                id="message2"
+                name="message2"
+                rows="5"
+                cols="30"
+                placeholder="Write your Comment"
+            ></textarea>
+        </form>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<section >
+    <div class="heading-decor">
+        <h1>DENTAL PROCEDURE/METHOD</h1>
+    </div>
+    <p>Your teeth crooked, crowded, or spaced apart? Do you want to improve your smile and overall dental health? Teeth braces are a common and effective orthodontic treatment that can help gradually move teeth into a better position and improve the appearance of your smile. Braces are not only used for cosmetic purposes. They can […]</p>
+</section>
+
+<section class="container">
+    <div class="last">
+
+        <div class="last-card">
+            <h1 class="myclass">My name is Hassan</h1>
+        </div>
+
+        <div class="last-card">
+            <h1 class="myclass">My name is Hassan</h1>
+        </div>
+
+    </div>
+</section>
+
+
+
+</body>
+</html>
