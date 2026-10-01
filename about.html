@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Rumi-Ware</title>
+
+    <style>
+
+        :root {
+            --primary: #514a85;
+            --secondary: #b2bcca;
+            --white: #ffffff;
+            --dark: #25243a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--white);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* HEADER*/
+
+        header {
+            background: rgb(4, 4, 66) ;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(81, 74, 133, 0.2);
+            height: 80px;
+            font-family:'Times New Roman';
+            transition: 0.3s ease;
+        }
+
+        header:hover {
+            transform: scale(1.001);
+            box-shadow: 0 6px 20px rgba(81, 74, 133, 0.3);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s ;
+            font-size: 40px;
+            float: left;
+        }
+
+        .logo:hover {
+            transform: scale(1.008);
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 25px;
+            padding: 8px 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: rgb(10, 10, 97);
+            background: var(--white);
+            transform: scale(1.1);
+        }
+        /*below header*/
+
+        .hero {
+            min-height: 45vh;
+            background: linear-gradient(
+                135deg,
+                rgb(76, 76, 123),
+                rgb(10, 10, 97)
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            padding: 80px 8%;
+            color: var(--white);
+            transition: 0.3s ease-in-out;
+        }
+
+        .hero:hover{
+            transform: scale(1.008);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: #b9f80a;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: auto;
+            color: var(--white);
+        }
+
+        /*general*/
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            color: rgb(10, 10, 97);
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #555;
+            font-size: 17px;
+        }
+
+        /* About */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: rgb(10, 10, 97);
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #555;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        .about-text-para{
+            transition: 0.3s ease-in-out;
+        }
+
+        .about-text-para:hover{
+            background: rgb(235, 235, 238);
+        }
+
+        .about-box {
+            background:rgb(214, 214, 236);
+            padding: 45px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+        }
+
+        .about-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(81, 74, 133, 0.15);
+        }
+
+        .about-box::before {
+            content: "";
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            background: rgb(10, 10, 97);
+            border-radius: 500px;
+            right: -50px;
+            top: -50px;
+            opacity: 0.5;
+        }
+
+        .about-box h3 {
+            color: rgb(10, 10, 97);
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .about-box p {
+            color: rgb(10, 10, 97);
+        }
+
+        /* mision*/
+
+        .mission-section {
+            background: #f0f6ff;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 18px;
+            border-top: 5px solid var(--primary);
+            box-shadow: 0 8px 25px rgba(81, 74, 133, 0.10);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(81, 74, 133, 0.18);
+        }
+
+        .card-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--secondary);
+            color: var(--primary);
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .card h4 {
+            color: rgb(10, 10, 97);
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        /* values*/
+
+        .values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .value {
+            text-align: center;
+            padding: 35px 25px;
+            border: 1px solid var(--secondary);
+            border-radius: 16px;
+            transition: 0.3s;
+        }
+
+        .value:hover {
+            background: var(--secondary);
+            transform: translateY(-6px);
+        }
+
+        .value span {
+            display: block;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .value h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .value p {
+            color: #555;
+            font-size: 15px;
+        }
+
+        /* technology*/
+
+        .technology {
+            background: #bdc9da;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .technology h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .technology > p {
+            max-width: 700px;
+            margin: 0 auto 35px;
+            color: var(--secondary);
+        }
+
+        .tech-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .tech {
+            padding: 12px 25px;
+            border: 1px solid var(--secondary);
+            border-radius: 30px;
+            color: var(--white);
+            transition: 0.3s;
+        }
+
+        .tech:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* cta*/
+
+        .cta {
+            text-align: center;
+            background: var(--secondary);
+            padding: 80px 8%;
+        }
+
+        .cta h2 {
+            color: var(--primary);
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: var(--dark);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        /* footer */
+
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 8%;
+        }
+
+        footer h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: var(--secondary);
+            font-size: 14px;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+           ========================= */
+
+        @media (max-width: 850px) {
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .values {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 55vh;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 65px 6%;
+            }
+
+            .section-title h2,
+            .technology h2,
+            .cta h2 {
+                font-size: 32px;
+            }
+
+            .about-box {
+                padding: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header>
+
+        <div class="logo">
+            RUMI WARE
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#mission">Mission</a>
+            <a href="#values">Values</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+         ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1 class="hero-text-hover">
+                About <span>Rumi Ware</span>
+            </h1>
+
+            <p class="hero-text-hover">
+                We build modern digital solutions that combine
+                software, artificial intelligence and creative technology
+                to help ideas become useful products.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT US
+         ========================= -->
+
+    <section>
+
+        <div class="about">
+
+            <div class="about-text">
+
+                <h2>Who We Are</h2>
+
+                <p class="about-text-para">
+                    Rumi Ware is a technology-focused software house
+                    dedicated to creating modern, practical and
+                    user-friendly digital solutions.
+                </p>
+
+                <p class="about-text-para">
+                    Our approach is simple: understand a problem,
+                    design a clear solution and use technology to
+                    turn that solution into reality.
+                </p>
+
+                <p class="about-text-para">
+                    From websites and software applications to
+                    AI-powered solutions, we focus on building
+                    technology that is useful, scalable and easy
+                    to understand.
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h3>Technology With Purpose</h3>
+
+                <p>
+                    We believe technology should not simply look
+                    impressive. It should solve real problems,
+                    improve experiences and create opportunities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MISSION & VISION
+         ========================= -->
+
+    <section class="mission-section" id="mission">
+
+        <div class="section-title">
+
+            <h2>Our Direction</h2>
+
+            <p>
+                The principles that guide the work we create.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                
+
+                <h4>Our Focus</h4>
+
+                <div class="direction">
+                    Artificial Intelligence
+Developing intelligent AI solutions that automate tasks, solve problems, and create smarter experiences for businesses and users.
+
+<h3>Software Development</h3>
+Building reliable, efficient, and scalable software designed to meet real-world requirements and support business growth.
+
+<h3>Web Development</h3>
+Creating modern, responsive, and engaging websites that combine attractive design with smooth performance and excellent user experience.
+
+<h3>Innovation & Improvement</h3>
+Exploring emerging technologies and new ideas to develop better solutions and continuously improve the way we build software..
+</div>                
+
+            </div>
+
+
+            <div class="card">
+
+
+                <h4>What We Want</h4>
+
+                <div class="direction">
+
+                    At RUMIWARE, we want to turn ideas into technology that creates real value. We aim to build modern software and AI-powered solutions that help businesses work smarter, solve problems, and grow in a digital world.
+                    
+
+<h3>Turn Ideas Into Reality</h3>
+We want to transform creative ideas into practical software solutions that solve real problems and create meaningful digital experiences.
+
+<h3>Build For The Future</h3>
+We aim to create modern, scalable technology that adapts to changing needs and helps businesses stay ready for the future.
+
+<h3>Create Real Impact</h3>
+We want our technology to make work easier, improve efficiency, and deliver solutions that provide genuine value to people and businesses.
+                
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+   
+    
+
+    <!-- =========================
+         TECHNOLOGY
+         ========================= -->
+
+    <section class="technology">
+
+        <h2>What We Work With</h2>
+
+        <p>
+            We continuously learn and work with modern technologies
+            to build software and digital experiences.
+        </p>
+
+        <div class="tech-list">
+
+            <div class="tech">Artificial Intelligence</div>
+
+            <div class="tech">Web Development</div>
+
+            <div class="tech">Software Development</div>
+
+            <div class="tech">Python</div>
+
+            <div class="tech">APIs</div>
+
+            <div class="tech">Databases</div>
+
+            <div class="tech">Automation</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+         ========================= -->
+
+    <section class="cta">
+
+        <h2>Let's Build Something Meaningful</h2>
+
+        <p>
+            Great software starts with a good idea.
+            Rumi Ware aims to turn ideas into practical
+            digital experiences through technology and creativity.
+        </p>
+
+        <a href="index.html" class="btn">
+            Explore Rumi Ware
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        <h3>RUMI WARE</h3>
+
+        <p>
+            Software • AI • Digital Solutions
+        </p>
+
+        <p>
+            © 2026 Rumi Ware. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
